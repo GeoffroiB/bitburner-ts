@@ -33,6 +33,7 @@ This project aims to make possible editing scripts for Bitburner, without requir
 
 Once this repository is cloned, go to its root directory and run npm install to install its dependencies.
 
+Also, based on the file '.env.template', a file '.env' must be created, filled out and placed at the root of the project
 
 ## Usage
 
