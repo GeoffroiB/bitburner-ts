@@ -661,7 +661,7 @@ interface RunningScript {
 /**
  * @public
  */
-export interface SourceFileLvl {
+/*export*/ interface SourceFileLvl {
   /** The number of the source file */
   n: number;
   /** The level of the source file */
