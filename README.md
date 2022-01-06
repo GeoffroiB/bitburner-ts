@@ -38,6 +38,7 @@ Once this repository is cloned, go to its root directory and run npm install to 
 
 > *TODO*
 
+All NetScript declarations are included globally, therefore they don't need to be imported.
 
 ## License
 
