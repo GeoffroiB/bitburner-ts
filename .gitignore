@@ -6,4 +6,4 @@
 
 /build/*.js
 !/build/gulpfile.js
-/scripts/dist/
+/dist/

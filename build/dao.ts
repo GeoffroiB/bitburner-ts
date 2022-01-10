@@ -83,7 +83,7 @@ export class ServerDAO {
         // if not exists
         // TODO
 
-        const filepath: string = path.resolve(`./scripts/dist/${filename}`).toString(); // TODO: fix var names
+        const filepath: string = path.resolve(`./dist/${filename}`).toString(); // TODO: fix var names
         // console.log(`filepath: ${filepath}`)
 
         const code: string = fs.readFileSync(filepath);

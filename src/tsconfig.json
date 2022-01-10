@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
-    "outDir": "../dist",
+    "outDir": "./../dist",
 
     "esModuleInterop": true,
     "isolatedModules": false,
