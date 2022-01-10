@@ -3,7 +3,7 @@ const ts = require("gulp-typescript");
 const path = require("path");
 
 export function transpileScripts() {
-    const proj = ts.createProject(path.resolve("scripts/tsconfig.json"));
+    const proj = ts.createProject(path.resolve("src/tsconfig.json"));
 
     return proj.src()
         .pipe(proj())
