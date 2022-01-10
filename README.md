@@ -3,7 +3,7 @@
 
 [![Current Version](https://img.shields.io/badge/version-0.0.1-green.svg)](https://github.com/GeoffoiB/bitburner-ts)
 
-This is a NodeJS/TypeScript development setup for the game `Bitburner` which is IDE independent. Scripts contained in this project serve as placeholders.
+This is a NodeJS/TypeScript development setup for the game `Bitburner` which is IDE independent. Scripts contained in "/src" serve as placeholders.
 
 
 ## Bitburner <a href="https://github.com/danielyxie/bitburner/"><img height="20" src="https://raw.githubusercontent.com/github/explore/89bdd9644f44d1b12180fd512b95574fe4c54617/topics/github-api/github-api.png"></a>
