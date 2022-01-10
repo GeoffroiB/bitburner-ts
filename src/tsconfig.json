@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "../dist",
 
     "esModuleInterop": true,
     "isolatedModules": false,
@@ -15,10 +15,10 @@
     "sourceMap": false,
     "strict": true,
     "target": "ES2021",
-    "typeRoots": ["./src/@types"],
+    "typeRoots": ["./@types"],
     "types": ["node", "bitburner"]
   },
 
-  "include": ["./**/*.ts"],
+  "include": ["**/*.ts"],
   "exclude": [""]
 }
