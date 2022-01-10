@@ -4767,7 +4767,7 @@ interface UserInterface {
    * ```ts
    * //ns2, copies files from home to a target server
    * const server = ns.args[0];
-   * const files = ["hack.js","weaken.js","grow.js"];
+   * const files = ["grow.js","weaken.js","grow.js"];
    * await ns.scp(files, "home", server);
    * ```
    * @param files - Filename or an array of filenames of script/literature files to copy.
