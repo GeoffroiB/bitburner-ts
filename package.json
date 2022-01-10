@@ -18,7 +18,6 @@
 
   "scripts": {
     "setup": "ts-node ./build/setup.ts",
-    "init": "tsc --project ./build/tsconfig.json",
     "transpile": "gulp transpile",
     "upload": "gulp upload"
   },
