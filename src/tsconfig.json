@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "./../dist",
 
     "esModuleInterop": true,
     "isolatedModules": false,
     "noImplicitAny": false,
 
     "lib": ["es2016", "dom", "es2017.object", "es2019"],
-    "module": "CommonJS",
+    "module": "ES2020",
     "moduleResolution": "node",
 
     "sourceMap": false,
     "strict": true,
-    "target": "ES6"
+    "target": "ES2021",
+    "typeRoots": ["./@types"],
+    "types": ["node", "bitburner"]
   },
 
-  "include": ["gulpfile.js", "build/gulpfile.js"]
+  "include": ["**/*.ts"],
+  "exclude": [""]
 }

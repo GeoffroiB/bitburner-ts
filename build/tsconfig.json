@@ -1,19 +1,23 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": ".",
+
+    "target": "ES2021",
+    "module": "CommonJS",
 
     "esModuleInterop": true,
     "isolatedModules": false,
     "noImplicitAny": false,
 
     "lib": ["es2016", "dom", "es2017.object", "es2019"],
-    "module": "CommonJS",
     "moduleResolution": "node",
 
     "sourceMap": false,
-    "strict": true,
-    "target": "ES6"
+    "strict": true
+
   },
 
-  "include": ["gulpfile.js", "build/gulpfile.js"]
+  "include": ["./*.ts"],
+  "exclude": ["./*.js", "./setup.ts"]
 }
