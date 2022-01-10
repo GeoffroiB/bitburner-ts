@@ -5,7 +5,6 @@ const fs = require("fs");
 const dotenv = require("ts-dotenv");
 
 import { strict as assert } from 'assert';
-// import { load } from 'ts-dotenv';
 
 export enum RequestAction {
     CREATE,
@@ -24,10 +23,10 @@ export interface RequestParams {
 }
 
 export class ServerDAO {
-    private auth_token: string | undefined;
-    private port: number | undefined;
+    private readonly auth_token: string | undefined;
+    private readonly port: number | undefined;
 
-    public init() {
+    public constructor() {
         const env = dotenv.load({
             AUTH_TOKEN: String,
             SERVER_PORT: Number
@@ -55,28 +54,36 @@ export class ServerDAO {
 
         try {
             const addr = `http://127.0.0.1:${this.port}/`;
-            fetch(addr, {
-                method: "post",
-                body,
-                headers: {
-                    "Content-Type": "application/json",
-                    "Content-Length": body.length.toString(),
-                    "Authorization": `Bearer ${this.auth_token}`
-                }
-            }).then(
-                async (value) => {
-                    //console.log(await value.text())
+
+            const response = await fetch(
+                addr, {
+                    method: "post",
+                    body,
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Content-Length": body.length.toString(),
+                        "Authorization": `Bearer ${this.auth_token}`
+                    }
                 });
+            const result = await response.text();
+            return result;
+
         } catch (e) {
             console.error(e);
-            return false;
+            return null;
         }
 
     }
 
-    public ping(): boolean {
-        // TODO: implement
-        return false;
+    public async ping() {
+        const start = new Date().getTime();
+        const result = await this.request({
+            action: RequestAction.CREATE, // useless
+            filename:"",
+            code:""
+        });
+        const end = new Date().getTime();
+        return result === "not a script file" ? (end - start) : null;
     }
 
     public async upload(filename: string) {

@@ -20,6 +20,7 @@
     "setup": "ts-node ./build/setup.ts",
     "transpile": "gulp transpile",
     "upload": "gulp upload",
+    "ping": "gulp ping",
     "watch": "gulp watch"
   },
 
