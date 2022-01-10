@@ -3,7 +3,7 @@
 
 [![Current Version](https://img.shields.io/badge/version-0.0.1-green.svg)](https://github.com/GeoffoiB/bitburner-ts)
 
-This is a NodeJS/TypeScript development setup and in-game scripts for the game `Bitburner`, without using `VSCode` and its extension `Bitburner Connector for VSCode`.
+This is a NodeJS/TypeScript development setup for the game `Bitburner` which is IDE independent. Scripts contained in this project serve as placeholders.
 
 
 ## Bitburner <a href="https://github.com/danielyxie/bitburner/"><img height="20" src="https://raw.githubusercontent.com/github/explore/89bdd9644f44d1b12180fd512b95574fe4c54617/topics/github-api/github-api.png"></a>
@@ -21,25 +21,26 @@ This project aims to make possible editing scripts for Bitburner, without requir
 
 ## Features
 
-- [ ] Transpile .ts scripts to .ns scripts.
-- [ ] Push 1 script to in-game home server.
-- [ ] Push multiple scripts to in-game home server.
-- [ ] Push scripts automatically by a file watcher.
-- [ ] Pull 1 script from in-game home server.
-- [ ] Pull multiple script from in-game home server.
-
+- [x] Transpile .ts scripts to .ns scripts.
+- [x] Push multiple scripts to in-game home server.
+- [ ] Push scripts automatically using a file watcher.
 
 ## Setup
 
-Once this repository is cloned, go to its root directory and run npm install to install its dependencies.
+Once this repository is cloned, go to its root directory and run `npm install` to install its dependencies.
+
+Then, run `npm run setup` to transpile the .ts build scripts. This can only be done once, unless the .ts scripts are altered.
 
 Also, based on the file '.env.template', a file '.env' must be created, filled out and placed at the root of the project
 
 ## Usage
 
-> *TODO*
+To transpile all scripts in "/src", run `npm run transpile`. The resulting .js scripts are output to "/dist".
 
-All NetScript declarations are included globally, therefore they don't need to be imported.
+To upload all scripts in "dist/", run `npm run upload`.
+The contents of "/dist" is representative of the layout of the uploaded files in the "home" in-game server.
+
+All NetScript declarations are included globally, therefore they don't need to be imported, as the in-game editor does.
 
 ## License
 
