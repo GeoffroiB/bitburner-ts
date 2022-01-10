@@ -19,7 +19,8 @@
   "scripts": {
     "setup": "ts-node ./build/setup.ts",
     "transpile": "gulp transpile",
-    "upload": "gulp upload"
+    "upload": "gulp upload",
+    "watch": "gulp watch"
   },
 
   "dependencies": {
@@ -28,6 +29,7 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-watch": "^5.0.1",
     "node-fetch": "2.6.6",
     "npx": "^10.2.2",
     "path": "^0.12.7",
